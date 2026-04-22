@@ -101,6 +101,16 @@ class Board:
         self.difficulty=difficulty
         self.cells=[[Cell(board[i][j],i,j,screen) for j in range(9)] for i in range(9)]
         self.selected=None
+        self.original=[[board[i][j] for j in range(9)] for i in range(9)]
+
+    # Added function reset_to_original for sudoku[dot]py button 'Reset.'
+
+    def reset_to_original(self):
+        for i in range(9):
+            for j in range(9):
+                self.cells[i][j].value=self.original[i][j]
+                self.cells[i][j].sketched_value=0
+
     def draw(self):
         gap=self.width//9
 
