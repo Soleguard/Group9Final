@@ -94,6 +94,7 @@ def main():
         # Clear screen to begin game session
         win.fill((255, 255, 255))
 
+        # Draw board
         board.draw()
 
         # Event loop
