@@ -19,6 +19,10 @@ LINE_COLOR = (180,  60,  60)   # reddish separator line
 BOARD_SIZE = 540
 SCREEN_HEIGHT = 660   # 540 board + 120 for button bar
 
+# Button settings
+BUTTON_WIDTH = 100
+BUTTON_HEIGHT = 100
+
 
 # Draw button
 def draw_button(surface, text, rect, font, color=BTN_COLOR, hover_color=BTN_HVR, text_color=BTN_TEXT):
@@ -34,15 +38,18 @@ def draw_button(surface, text, rect, font, color=BTN_COLOR, hover_color=BTN_HVR,
 
 
 def main():
+
     # Initialize pygame
     pygame.init()
 
-    # Create rectangle for buttons
-    # pygame.Rect(left, top, width, height)
-    button = pygame.Rect(300, 600, 100, 100)  # Test case of 1 button
-
     # Create font settings for button
     button_font = pygame.font.Font(None, 30)
+
+    # Create rectangle for reset, restart, and exit buttons
+    # Format: pygame.Rect(x (left), y (top), width, height)
+    reset_rect = pygame.Rect(60, 600, BUTTON_WIDTH, BUTTON_HEIGHT)
+    restart_rect = pygame.Rect(60, 600, BUTTON_WIDTH, BUTTON_HEIGHT)
+    exit_rect = pygame.Rect(60, 600, BUTTON_WIDTH, BUTTON_HEIGHT)
 
     # Screen display
     screen_display = pygame.display
@@ -84,9 +91,9 @@ def main():
     # board = Board(x, y, win, difficulty, board_data)
 
     # Create reset, restart, and exit buttons
-    draw_button(screen_display.set_mode(z), "RESET", button, button_font)
-    # draw_button(screen_display.set_mode(z), "RESTART", rect, "Arial")
-    # draw_button(screen_display.set_mode(z), "EXIT", rect, "Arial")
+    draw_button(win, "RESET", reset_rect, button_font)
+    draw_button(win, "RESTART", restart_rect, button_font)
+    draw_button(win, "EXIT", exit_rect, button_font)
 
     # Loop through Sudoku game
     while True:
