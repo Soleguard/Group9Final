@@ -6,15 +6,6 @@ import sys
 from board import Board
 from board import start_screen
 from sudoku_generator import generate_sudoku
-
-# ── Colour palette
-WHITE = (255, 255, 255)
-LIGHT_RED = (220,  80,  80)   # main background colour
-DARK_RED = (180,  40,  40)   # deeper red for button hover
-BTN_COLOR = (255, 255, 255)   # white buttons
-BTN_HVR = (220, 220, 220)   # light grey on hover
-BTN_TEXT = (0,   0,   0)     # black button text
-LINE_COLOR = (180,  60,  60)   # reddish separator line
  
 BOARD_SIZE = 540
 SCREEN_HEIGHT = 660   # 540 board + 120 for button bar

@@ -3,7 +3,7 @@ import pygame
 
 # Moved draw_button from sudoku
 
-# ── Colour palette
+# ── Color palette
 WHITE = (255, 255, 255)
 LIGHT_RED = (220,  80,  80)   # main background colour
 DARK_RED = (180,  40,  40)   # deeper red for button hover
@@ -59,7 +59,7 @@ def start_screen(win):
         # The title
 
         title=font.render("Sudoku Game", True, (0,0,0))
-        win.blit(title, (180, 100))
+        win.blit(title, (95, 100))
 
         # Button design
 
