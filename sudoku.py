@@ -5,6 +5,7 @@ import sys
 # Import Board class and start_screen and generate_sudoku functions
 from board import Board
 from board import start_screen
+from board import draw_button
 from sudoku_generator import generate_sudoku
  
 BOARD_SIZE = 540
