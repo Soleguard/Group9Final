@@ -123,10 +123,10 @@ def main():
         removed_cells = 30
 
     elif difficulty == "medium":
-        removed_cells = 45
+        removed_cells = 40
 
     elif difficulty == "hard":
-        removed_cells = 55
+        removed_cells = 50
 
     # Call Board class from board [dot] py
     board_data = generate_sudoku(9, removed_cells)
